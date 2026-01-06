@@ -33,7 +33,7 @@ public class CustomEntityResponseHandler extends ResponseEntityExceptionHandler 
                     ex.getMessage(),
                     request.getDescription(false)
             );
-            return new ResponseEntity<>(response, HttpStatus.INTERNAL_SERVER_ERROR);
+            return new ResponseEntity<>(response, HttpStatus.BAD_REQUEST);
 
     }
 }
