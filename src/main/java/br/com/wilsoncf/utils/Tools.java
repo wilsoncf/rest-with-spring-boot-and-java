@@ -1,11 +1,11 @@
 package br.com.wilsoncf.utils;
 
-import br.com.wilsoncf.exception.UnsupportedMathOperationException;
+import br.com.wilsoncf.exception.ResourceNotFoundException;
 
 public class Tools {
 
     public static Double convertToDouble(String strNumber) throws IllegalArgumentException {
-        if (strNumber == null || strNumber.isEmpty()) throw new UnsupportedMathOperationException("Please set a numeric value");
+        if (strNumber == null || strNumber.isEmpty()) throw new ResourceNotFoundException("Please set a numeric value");
         String number = strNumber.replace(",", ".");
         return Double.parseDouble(strNumber);
     }
